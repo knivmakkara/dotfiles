@@ -158,10 +158,27 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Set leader key to comma
-let mapleader=","
+let mapleader="ö"
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
+" Edit .vimrc
+nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+
+" Reload .vimrc
+nnoremap <Leader>sv :source $MYVIMRC<CR>
+
+" Restore selction on indent
+vnoremap > >gv
+vnoremap < <gv
+
+" Noop for arrow keys in normal mode
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'kien/ctrlp.vim'
 call plug#end()
