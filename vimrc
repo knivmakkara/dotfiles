@@ -157,7 +157,7 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" Set leader key to comma
+" Set leader key 
 let mapleader="ö"
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
@@ -177,6 +177,12 @@ nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
