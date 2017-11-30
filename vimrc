@@ -121,7 +121,7 @@ set cmdheight=2
 set number
  
 " Quickly time out on keycodes, but never time out on mappings
-set notimeout ttimeout ttimeoutlen=200
+set timeout ttimeout ttimeoutlen=200
  
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
@@ -172,6 +172,9 @@ nnoremap <Leader>sv :source $MYVIMRC<CR>
 vnoremap > >gv
 vnoremap < <gv
 
+" Easy save
+nnoremap <Leader>ss :w<cr>
+
 " Noop for arrow keys in normal mode
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
@@ -183,6 +186,12 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap H ^
+nnoremap L $
+
+inoremap jk <Esc>
+inoremap <Esc> <nop>
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
